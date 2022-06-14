@@ -1,0 +1,9 @@
+{
+  "name": "kugou_music",
+  "displayname": "酷狗音乐",
+  "description": "www.kugou.com",
+  "version": "1.0",
+  "module": "kugouSource.php",
+  "type": "lyric",
+  "class": "AumKugouSource"
+}
