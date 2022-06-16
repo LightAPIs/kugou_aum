@@ -1,5 +1,4 @@
 <?php
-require('kugouCommon.php');
 
 class AumKugouHandler {
     public static $siteSearch = 'http://lyrics.kugou.com/search?ver=1&man=yes&client=pc&duration=277000&hash=&keyword=';
@@ -29,9 +28,9 @@ class AumKugouHandler {
         }
     }
 
-    public static function search($word) {
+    public static function search($title, $artist) {
         $results = array();
-        $url = AumKugouHandler::$siteSearch . urlencode($word);
+        $url = AumKugouHandler::$siteSearch . urlencode($artist . '-' . $title);
         $jsonContent = AumKugouHandler::getContent($url, '{"candidates":[]}');
         $json = json_decode($jsonContent, true);
 

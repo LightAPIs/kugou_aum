@@ -17,7 +17,7 @@ class AumKugouSource {
         $this->mTitle = $title;
         $this->lowTitle = strtolower($title);
 
-        $list = AumKugouHandler::search($artist . '-' . $title);
+        $list = AumKugouHandler::search($title, $artist);
         if (count($list) === 0) {
             return 0;
         }
