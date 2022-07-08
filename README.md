@@ -22,5 +22,6 @@
 
 - [LightAPIs/followlyrics_aum](https://github.com/LightAPIs/followlyrics_aum)
 - [LightAPIs/kugeci_aum](https://github.com/LightAPIs/kugeci_aum)
+- [LightAPIs/kuwo_aum](https://github.com/LightAPIs/kuwo_aum)
 - [LightAPIs/netease_aum](https://github.com/LightAPIs/netease_aum)
 - [LightAPIs/qq_music_aum](https://github.com/LightAPIs/qq_music_aum)
