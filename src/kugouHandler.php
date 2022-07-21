@@ -12,8 +12,8 @@ class AumKugouHandler {
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($curl, CURLOPT_USERAGENT, AumKugouHandler::$userAgent);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, AumKugouHandler::$siteHeader);
+        curl_setopt($curl, CURLOPT_USERAGENT, self::$userAgent);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, self::$siteHeader);
         curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 10);
         curl_setopt($curl, CURLOPT_TIMEOUT, 10);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -30,8 +30,8 @@ class AumKugouHandler {
 
     public static function search($title, $artist) {
         $results = array();
-        $url = AumKugouHandler::$siteSearch . urlencode($artist . '-' . $title);
-        $jsonContent = AumKugouHandler::getContent($url, '{"candidates":[]}');
+        $url = self::$siteSearch . urlencode($artist . '-' . $title);
+        $jsonContent = self::getContent($url, '{"candidates":[]}');
         $json = json_decode($jsonContent, true);
 
         $songArray = $json['candidates'];
@@ -53,8 +53,8 @@ class AumKugouHandler {
     }
 
     public static function downloadLyric($songId) {
-        $url = AumKugouHandler::$siteDownload . $songId;
-        $jsonContent = AumKugouHandler::getContent($url, '{"content": ""}');
+        $url = self::$siteDownload . $songId;
+        $jsonContent = self::getContent($url, '{"content": ""}');
         $json = json_decode($jsonContent, true);
         $encodeLyric = $json['content'];
         return base64_decode($encodeLyric);
