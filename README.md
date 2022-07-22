@@ -4,7 +4,7 @@
 
 ## 说明
 
-这是一个用于群辉 Audio Station 的歌词插件，歌词内容来源于[酷狗音乐](https://www.kugou.com/)。
+这是一个用于群晖 Audio Station 的歌词插件，歌词内容来源于[酷狗音乐](https://www.kugou.com/)。
 
 ## 下载插件
 
